@@ -22,8 +22,8 @@ module.exports = (sequelize, DataTypes) => {
     note: DataTypes.STRING,
     orderId: DataTypes.INTEGER,
     deletedAt: DataTypes.DATE,
-    acceptted: DataTypes.DATE,
-    preparing: DataTypes.DATE,
+    confirmed: DataTypes.DATE,
+    prepared: DataTypes.DATE,
     delivered: DataTypes.DATE
   }, {
     sequelize,
