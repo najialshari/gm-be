@@ -39,17 +39,20 @@ module.exports = {
           key: "id"
         }
       },
-      acceptted: {
+      confirmed: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue:null
       },
-      preparing: {
+      prepared: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue:null
       },
       delivered: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue:null
       },
       createdAt: {
         allowNull: false,

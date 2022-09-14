@@ -10,13 +10,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        unique: true,
         type: Sequelize.STRING
       },
       description:{
+        allowNull: false,
         type: Sequelize.STRING
       },
       isAvailable: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize,
+        defaultValue:true
       },
       createdAt: {
         allowNull: false,
