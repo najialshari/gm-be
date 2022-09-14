@@ -1,5 +1,4 @@
 'use strict';
-const models = require("../models/index")
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('roles', {
@@ -9,7 +8,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      user: {
+      name: {
+        unique: true,
         type: Sequelize.STRING
       },
       createdAt: {

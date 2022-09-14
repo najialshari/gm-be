@@ -1,10 +1,11 @@
 {
   "development": {
     "username": "root",
-    "password": "@MySQL#1",
+    "password": "asd123ASD",
     "database": "globalMenu",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "define": {"timestamp": false}
   },
   "test": {
     "username": "root",

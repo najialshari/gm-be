@@ -1,5 +1,4 @@
 'use strict';
-const models = require("../models/index")
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('addresses', {
