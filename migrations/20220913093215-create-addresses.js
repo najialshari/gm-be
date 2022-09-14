@@ -2,20 +2,16 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('addresses', {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
+      detail: {
+        type: Sequelize.STRING,
         primaryKey: true,
-        type: Sequelize.INTEGER
       },
-      address: {
-        type: Sequelize.STRING
-      },
-      addressDescription: {
+      description: {
         type: Sequelize.STRING
       },
       userId: {
         type: Sequelize.INTEGER,
+        primaryKey: true,
         references: {
           model: {
             tableName: "users"
@@ -27,7 +23,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("now")
-
       },
       updatedAt: {
         allowNull: false,
@@ -35,7 +30,6 @@ module.exports = {
         defaultValue: Sequelize.fn("now")
       },
       deletedAt: {
-        allowNull: false,
         type: Sequelize.DATE,
       }
     });

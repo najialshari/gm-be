@@ -1,5 +1,4 @@
 'use strict';
-const models = require("../models/index")
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('orderDetails', {
@@ -9,13 +8,22 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      categoryMealsId: {
+      categoryMealsMeId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
             tableName: "categoryMeals"
           },
-          key: "id"
+          key: "mealId"
+        }
+      },
+      categoryMealsCaId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "categoryMeals"
+          },
+          key: "CategoryId"
         }
       },
       qty: {
@@ -40,25 +48,18 @@ module.exports = {
         }
       },
       confirmed: {
-        allowNull: false,
         type: Sequelize.DATE,
-        defaultValue:null
       },
       prepared: {
-        allowNull: false,
         type: Sequelize.DATE,
-        defaultValue:null
       },
       delivered: {
-        allowNull: false,
         type: Sequelize.DATE,
-        defaultValue:null
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("now")
-
       },
       updatedAt: {
         allowNull: false,
@@ -66,7 +67,6 @@ module.exports = {
         defaultValue: Sequelize.fn("now")
       },
       deletedAt: {
-        allowNull: false,
         type: Sequelize.DATE,
       }
     });

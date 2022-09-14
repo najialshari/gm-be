@@ -1,16 +1,10 @@
 'use strict';
-const models = require("../models/index")
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('categoryMeals', {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
-      },
       categoryId: {
         type: Sequelize.INTEGER,
+        primaryKey: true,
         references: {
           model: {
             tableName: "categories"
@@ -20,6 +14,7 @@ module.exports = {
       },
       mealId: {
         type: Sequelize.INTEGER,
+        primaryKey: true,
         references: {
           model: {
             tableName: "meals"
@@ -29,13 +24,12 @@ module.exports = {
       },
       isAvailable: {
         type: Sequelize.BOOLEAN,
-        defaultValue:false
+        defaultValue: true
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("now")
-
       },
       updatedAt: {
         allowNull: false,
@@ -43,7 +37,6 @@ module.exports = {
         defaultValue: Sequelize.fn("now")
       },
       deletedAt: {
-        allowNull: false,
         type: Sequelize.DATE,
       }
     });
