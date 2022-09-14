@@ -1,5 +1,4 @@
 'use strict';
-const models = require("../models/index")
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('tables', {
@@ -10,6 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       no: {
+        unique: true,
         type: Sequelize.INTEGER
       },
       uuid: {
@@ -22,7 +22,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("now")
-
       },
       updatedAt: {
         allowNull: false,
@@ -30,8 +29,7 @@ module.exports = {
         defaultValue: Sequelize.fn("now")
       },
       deletedAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
+        type: Sequelize.DATE
       }
     });
   },

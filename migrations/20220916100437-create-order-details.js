@@ -1,40 +1,59 @@
 'use strict';
-const models = require("../models/index")
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('categoryMeals', {
+    await queryInterface.createTable('orderDetails', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      categoryId: {
+      categoryMealsId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: "categories"
+            tableName: "categoryMeals"
           },
           key: "id"
         }
       },
-      mealId: {
+      qty: {
+        type: Sequelize.INTEGER
+      },
+      discount: {
+        type: Sequelize.INTEGER
+      },
+      subTotal: {
+        type: Sequelize.DECIMAL
+      },
+      note: {
+        type: Sequelize.STRING
+      },
+      orderId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: "meals"
+            tableName: "orders"
           },
           key: "id"
         }
       },
-      isAvailable: {
-        type: Sequelize.BOOLEAN
+      confirmed: {
+        type: Sequelize.DATE,
+      },
+      rate: {
+        type: Sequelize.INTEGER,
+      },
+      prepared: {
+        type: Sequelize.DATE,
+      },
+      delivered: {
+        type: Sequelize.DATE,
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("now")
-
       },
       updatedAt: {
         allowNull: false,
@@ -42,12 +61,11 @@ module.exports = {
         defaultValue: Sequelize.fn("now")
       },
       deletedAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
+        type: Sequelize.DATE
       }
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('categoryMeals');
+    await queryInterface.dropTable('orderDetails');
   }
 };

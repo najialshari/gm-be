@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Order.belongsTo(models.Table, { foreignKey: "tableId" })
+      Order.hasMany(models.OrderDetail, { foreignKey: "orderId" })
+      Order.belongsTo(models.User, { foreignKey: "orderId" })
+      Order.belongsTo(models.Address, { foreignKey: "addressId" })
     }
   }
   Order.init({
@@ -18,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     addressId: DataTypes.INTEGER,
     tableId: DataTypes.INTEGER,
-    priceTotal: DataTypes.INTEGER,
+    totalPrice: DataTypes.DECIMAL,
     date: DataTypes.DATE,
     done: DataTypes.BOOLEAN,
     note: DataTypes.STRING,

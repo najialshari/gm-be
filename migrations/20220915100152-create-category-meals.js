@@ -1,61 +1,57 @@
 'use strict';
-const models = require("../models/index")
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('orderDetails', {
+    await queryInterface.createTable('categoryMeals', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      categoryMealsId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: {
-            tableName: "categoryMeals"
-          },
-          key: "id"
-        }
-      },
-      qty: {
-        type: Sequelize.INTEGER
-      },
-      discount: {
-        type: Sequelize.INTEGER
-      },
-      subPrice: {
-        type: Sequelize.INTEGER
-      },
-      note: {
+      image: {
         type: Sequelize.STRING
       },
-      orderId: {
+      description: {
+        type: Sequelize.STRING
+      },
+      price: { 
+        type: Sequelize.DECIMAL 
+      },
+      isAvailable: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
+      },
+      categoryId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: "orders"
+            tableName: "categories"
           },
           key: "id"
         }
       },
-      acceptted: {
-        allowNull: false,
-        type: Sequelize.DATE,
+      mealId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "meals"
+          },
+          key: "id"
+        }
       },
-      preparing: {
-        allowNull: false,
-        type: Sequelize.DATE,
-      },
-      delivered: {
-        allowNull: false,
-        type: Sequelize.DATE,
+      typeId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "mealTypes"
+          },
+          key: "id"
+        }
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("now")
-
       },
       updatedAt: {
         allowNull: false,
@@ -63,12 +59,11 @@ module.exports = {
         defaultValue: Sequelize.fn("now")
       },
       deletedAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
+        type: Sequelize.DATE
       }
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('orderDetails');
+    await queryInterface.dropTable('categoryMeals');
   }
 };
