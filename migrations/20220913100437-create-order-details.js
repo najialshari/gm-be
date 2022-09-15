@@ -67,7 +67,7 @@ module.exports = {
         defaultValue: Sequelize.fn("now")
       },
       deletedAt: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATE
       }
     });
   },
