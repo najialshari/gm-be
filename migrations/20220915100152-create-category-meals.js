@@ -2,9 +2,14 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('categoryMeals', {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER
+      },
       categoryId: {
         type: Sequelize.INTEGER,
-        primaryKey: true,
         references: {
           model: {
             tableName: "categories"
@@ -14,13 +19,24 @@ module.exports = {
       },
       mealId: {
         type: Sequelize.INTEGER,
-        primaryKey: true,
         references: {
           model: {
             tableName: "meals"
           },
           key: "id"
         }
+      },
+      typeId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "mealTypes"
+          },
+          key: "id"
+        }
+      },
+      price: { 
+        type: Sequelize.DECIMAL 
       },
       isAvailable: {
         type: Sequelize.BOOLEAN,

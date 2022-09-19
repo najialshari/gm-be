@@ -12,22 +12,22 @@ module.exports = {
         unique: true,
         type: Sequelize.INTEGER
       },
-      addressDetail: {
+      addressId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
             tableName: "addresses"
           },
-          key: "detail"
+          key: "id"
         }
       },
-      addressUserId: {
+      userId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: "addresses"
+            tableName: "users"
           },
-          key: "UserId"
+          key: "id"
         }
       },
       tableId: {
@@ -39,8 +39,8 @@ module.exports = {
           key: "id"
         }
       },
-      priceTotal: {
-        type: Sequelize.INTEGER
+      totalPrice: {
+        type: Sequelize.DECIMAL
       },
       date: {
         type: Sequelize.DATE

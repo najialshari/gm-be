@@ -8,22 +8,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      categoryMealsMeId: {
+      categoryMealsId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
             tableName: "categoryMeals"
           },
-          key: "mealId"
-        }
-      },
-      categoryMealsCaId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: {
-            tableName: "categoryMeals"
-          },
-          key: "CategoryId"
+          key: "id"
         }
       },
       qty: {
@@ -32,8 +23,8 @@ module.exports = {
       discount: {
         type: Sequelize.INTEGER
       },
-      subPrice: {
-        type: Sequelize.INTEGER
+      subTotal: {
+        type: Sequelize.DECIMAL
       },
       note: {
         type: Sequelize.STRING
