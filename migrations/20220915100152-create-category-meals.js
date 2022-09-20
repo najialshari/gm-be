@@ -8,6 +8,22 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      image: {
+        type: Sequelize.STRING
+      },
+      description: {
+        type: Sequelize.STRING
+      },
+      rate: {
+        type: Sequelize.INTEGER
+      },
+      price: { 
+        type: Sequelize.DECIMAL 
+      },
+      isAvailable: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
+      },
       categoryId: {
         type: Sequelize.INTEGER,
         references: {
@@ -34,13 +50,6 @@ module.exports = {
           },
           key: "id"
         }
-      },
-      price: { 
-        type: Sequelize.DECIMAL 
-      },
-      isAvailable: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: true
       },
       createdAt: {
         allowNull: false,

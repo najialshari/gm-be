@@ -12,18 +12,6 @@ module.exports = {
         unique: true,
         type: Sequelize.STRING
       },
-      image: {
-        type: Sequelize.STRING
-      },
-      description: {
-        type: Sequelize.STRING
-      },
-      price: {
-        type: Sequelize.INTEGER
-      },
-      rate: {
-        type: Sequelize.INTEGER
-      },
       isAvailable: {
         type: Sequelize.BOOLEAN,
         defaultValue: true
