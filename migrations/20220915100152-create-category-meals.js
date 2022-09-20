@@ -14,9 +14,6 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
-      rate: {
-        type: Sequelize.INTEGER
-      },
       price: { 
         type: Sequelize.DECIMAL 
       },
