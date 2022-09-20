@@ -13,7 +13,8 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       CategoryMeal.belongsTo(models.Meal, { foreignKey: "mealId" })
       CategoryMeal.belongsTo(models.Category, { foreignKey: "categoryId" })
-      CategoryMeal.hasMany(models.OrderDetail, { foreignKey: ["categoryId", "mealId"] })
+      CategoryMeal.belongsTo(models.MealType, { foreignKey: "typeId" })
+      CategoryMeal.hasMany(models.OrderDetail, { foreignKey: "categoryMealsId" })
     }
   }
   CategoryMeal.init({

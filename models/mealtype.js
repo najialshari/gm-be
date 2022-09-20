@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      MealType.hasMany(models.CategoryMeal, { foreignKey: 'typeId' })
     }
   }
   MealType.init({

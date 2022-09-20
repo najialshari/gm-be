@@ -41,6 +41,9 @@ module.exports = {
       confirmed: {
         type: Sequelize.DATE,
       },
+      rate: {
+        type: Sequelize.INTEGER,
+      },
       prepared: {
         type: Sequelize.DATE,
       },
