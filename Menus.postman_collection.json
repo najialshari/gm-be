@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "1bc10b75-48ea-40da-a532-c36a6dfc399e",
+		"name": "Menus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22806431"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{categories}}",
+							"host": [
+								"{{categories}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"gh1\",\r\n    \"description\": \"كافة طلبات العشاء\",\r\n    \"isAvailable\": \"\",\r\n    \"deletedAt\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{categories}}",
+							"host": [
+								"{{categories}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meals",
+			"item": [
+				{
+					"name": "Get All Meals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{meals}}",
+							"host": [
+								"{{meals}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Meal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Shawarma\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{meals}}",
+							"host": [
+								"{{meals}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Meal To Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryId\": \"2\",\r\n    \"typeId\": \"2\",\r\n    \"image\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 12.256\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{meals}}/1",
+							"host": [
+								"{{meals}}"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category Meals",
+			"item": [
+				{
+					"name": "Get All Category Meals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meal Types",
+			"item": [
+				{
+					"name": "Get All Meal Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{mealTypes}}",
+							"host": [
+								"{{mealTypes}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Meal Type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"meal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{mealTypes}}",
+							"host": [
+								"{{mealTypes}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
