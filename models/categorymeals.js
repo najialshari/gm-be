@@ -18,8 +18,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   CategoryMeal.init({
+    image: DataTypes.STRING,
+    description: DataTypes.STRING,
+    price: DataTypes.DECIMAL,
+    discount: DataTypes.INTEGER, 
     categoryId: DataTypes.INTEGER,
     mealId: DataTypes.INTEGER,
+    typeId: DataTypes.INTEGER,
     isAvailable: DataTypes.BOOLEAN,
     deletedAt: DataTypes.DATE
   }, {

@@ -16,10 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Meal.init({
     name: DataTypes.STRING,
-    image: DataTypes.STRING,
     description: DataTypes.STRING,
-    price: DataTypes.INTEGER,
-    rate: DataTypes.INTEGER,
     isAvailable: DataTypes.BOOLEAN,
     deletedAt: DataTypes.DATE
   }, {

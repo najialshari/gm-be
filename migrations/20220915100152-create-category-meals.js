@@ -15,7 +15,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       price: { 
-        type: Sequelize.DECIMAL 
+        type: Sequelize.DECIMAL(10,2) 
+      },
+      discount: { 
+        type: Sequelize.INTEGER, 
       },
       isAvailable: {
         type: Sequelize.BOOLEAN,

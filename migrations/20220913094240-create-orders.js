@@ -40,7 +40,7 @@ module.exports = {
         }
       },
       totalPrice: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.DECIMAL(10,2)
       },
       date: {
         type: Sequelize.DATE

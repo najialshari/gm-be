@@ -24,7 +24,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       subTotal: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.DECIMAL(10,2)
       },
       note: {
         type: Sequelize.STRING

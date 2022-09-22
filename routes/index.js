@@ -1,11 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var usersRouter = require('../lib/users/routes');
-var categoriesRouter = require('../lib/menu/categories/routes');
-var mealsRouter = require('../lib/menu/meals/routes');
+var menusRouter = require('../lib/menu/routes');
+// var qrCodesRouter = require('../lib/qrCodes/routes');
+// var ordersRouter = require('../lib/orders/routes');
 
-app.use('/users', usersRouter);
-app.use('/categories', categoriesRouter);
-app.use('/meals', mealsRouter);
+router.use('/users', usersRouter);
+// app.use('/qrCodes', qrCodesRouter);
+// app.use('/orders', ordersRouter);
+router.use('/menus', menusRouter);
 
 module.exports = router;
