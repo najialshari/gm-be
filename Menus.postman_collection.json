@@ -30,7 +30,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"gh1\",\r\n    \"description\": \"كافة طلبات العشاء\",\r\n    \"isAvailable\": \"\",\r\n    \"deletedAt\": \"\"\r\n}",
+							"raw": "{\r\n    \"name\":\"meal\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -41,6 +41,66 @@
 							"raw": "{{categories}}",
 							"host": [
 								"{{categories}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"e1\",\r\n    \"description\":\"New disc\",\r\n    \"isAvailable\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{categories}}/8",
+							"host": [
+								"{{categories}}"
+							],
+							"path": [
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{categories}}/2",
+							"host": [
+								"{{categories}}"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{categories}}/4",
+							"host": [
+								"{{categories}}"
+							],
+							"path": [
+								"4"
 							]
 						}
 					},
@@ -66,13 +126,30 @@
 					"response": []
 				},
 				{
+					"name": "Get One Meal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{meals}}/4",
+							"host": [
+								"{{meals}}"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Add New Meal",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"Shawarma\"\r\n}",
+							"raw": "{\r\n    \"name\":\"Burger21\",\r\n    \"description\": \"beaf meat and bread\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -89,13 +166,13 @@
 					"response": []
 				},
 				{
-					"name": "Add Meal To Category",
+					"name": "Update Meal",
 					"request": {
-						"method": "POST",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categoryId\": \"2\",\r\n    \"typeId\": \"2\",\r\n    \"image\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 12.256\r\n}",
+							"raw": "{\r\n    \"name\": \"new\",\r\n    \"description\":\"New disc\",\r\n    \"isAvailable\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -103,12 +180,55 @@
 							}
 						},
 						"url": {
-							"raw": "{{meals}}/1",
+							"raw": "{{meals}}/3",
 							"host": [
 								"{{meals}}"
 							],
 							"path": [
-								"1"
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Meal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{meals}}/3",
+							"host": [
+								"{{meals}}"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Meal To Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"image\": \"asasdd\",\r\n    \"description\": \"\",\r\n    \"price\": 100.26\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{meals}}/4",
+							"host": [
+								"{{meals}}"
+							],
+							"path": [
+								"4"
 							]
 						}
 					},
@@ -125,7 +245,103 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "{{categoryMeals}}",
+							"host": [
+								"{{categoryMeals}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Category Meal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{categoryMeals}}/4",
+							"host": [
+								"{{categoryMeals}}"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Meal To Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryId\": \"3\",\r\n\r\n    \"image\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 11.26,\r\n    \"discount\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{meals}}/2",
+							"host": [
+								"{{meals}}"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category Meal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"image\":\"bird\", \r\n    \"description\": \"bird\", \r\n    \"price\": 17.02, \r\n    \"discount\": 12, \r\n    \"isAvailable\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{categoryMeals}}/4",
+							"host": [
+								"{{categoryMeals}}"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category Meal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{categoryMeals}}/6",
+							"host": [
+								"{{categoryMeals}}"
+							],
+							"path": [
+								"6"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
 						}
 					},
 					"response": []
@@ -150,13 +366,30 @@
 					"response": []
 				},
 				{
+					"name": "Get One Meal Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{mealTypes}}/2",
+							"host": [
+								"{{mealTypes}}"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Add New Meal Type",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"meal\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Medium\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -167,6 +400,32 @@
 							"raw": "{{mealTypes}}",
 							"host": [
 								"{{mealTypes}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Meal Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"large\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{mealTypes}}/2",
+							"host": [
+								"{{mealTypes}}"
+							],
+							"path": [
+								"2"
 							]
 						}
 					},

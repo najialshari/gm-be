@@ -12,6 +12,9 @@ module.exports = {
         unique: true,
         type: Sequelize.STRING
       },
+      description: {
+      type: Sequelize.STRING,
+      },
       isAvailable: {
         type: Sequelize.BOOLEAN,
         defaultValue: true
