@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "deaa4bbe-5587-452f-95e2-7ea191d83f02",
+		"name": "Orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22806431"
+	},
+	"item": [
+		{
+			"name": "Get All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{orders}}",
+					"host": [
+						"{{orders}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{orders}}/1",
+					"host": [
+						"{{orders}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{orders}}/1",
+					"host": [
+						"{{orders}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tableId\": \"1\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{orders}}",
+					"host": [
+						"{{orders}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tables",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{tables}}",
+					"host": [
+						"{{tables}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Table",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uuid\":\"dfd\",\r\n    \"qrCode\":\"www\",\r\n    \"no\":\"61\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tables}}",
+					"host": [
+						"{{tables}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Table",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uuid\":\"naji\",\r\n    \"qrCode\":\"najiqr\",\r\n    \"no\":\"3\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tables}}/2",
+					"host": [
+						"{{tables}}"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Table",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{tables}}/2",
+					"host": [
+						"{{tables}}"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
