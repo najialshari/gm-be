@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Subscriber.init({
     email: DataTypes.STRING,
-    no: DataTypes.INTEGER,
     deletedAt: DataTypes.DATE
   },
      {
