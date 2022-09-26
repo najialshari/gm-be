@@ -72,11 +72,16 @@
 		{
 			"name": "Add User Address",
 			"request": {
-				"method": "DELETE",
+				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"detail\":\"naji home1\"\r\n}"
+					"raw": "{\r\n    \"detail\":\"naji home2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": {
 					"raw": "{{address}}/1",
@@ -96,12 +101,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{address}}/2",
+					"raw": "{{address}}/9",
 					"host": [
 						"{{address}}"
 					],
 					"path": [
-						"2"
+						"9"
 					]
 				}
 			},
@@ -114,7 +119,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"detail\":\"www3\"\r\n}",
+					"raw": "{\r\n    \"detail\":\"naji home\",\r\n    \"id\":4\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

@@ -21,6 +21,40 @@
 			"response": []
 		},
 		{
+			"name": "Get One Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{orders}}/1",
+					"host": [
+						"{{orders}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{orders}}/1",
+					"host": [
+						"{{orders}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Add New Order",
 			"request": {
 				"method": "POST",
@@ -75,6 +109,49 @@
 					"raw": "{{tables}}",
 					"host": [
 						"{{tables}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Table",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uuid\":\"naji\",\r\n    \"qrCode\":\"najiqr\",\r\n    \"no\":\"3\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tables}}/2",
+					"host": [
+						"{{tables}}"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Table",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{tables}}/2",
+					"host": [
+						"{{tables}}"
+					],
+					"path": [
+						"2"
 					]
 				}
 			},
