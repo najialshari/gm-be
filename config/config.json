@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "asd123ASD",
-    "database": "globalMenu",
+    "password": "@MySQL#1",
+    "database": "globalMenuV3",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "define": {"timestamp": false}
