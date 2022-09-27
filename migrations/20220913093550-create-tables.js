@@ -9,7 +9,6 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       no: {
-        unique: true,
         type: Sequelize.INTEGER
       },
       uuid: {

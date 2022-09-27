@@ -30,7 +30,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"meal\"\r\n}",
+							"raw": "{\r\n    \"name\":\"Dinner\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -95,12 +95,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{categories}}/4",
+							"raw": "{{categories}}/3",
 							"host": [
 								"{{categories}}"
 							],
 							"path": [
-								"4"
+								"3"
 							]
 						}
 					},
@@ -131,12 +131,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{meals}}/41",
+							"raw": "{{meals}}/4",
 							"host": [
 								"{{meals}}"
 							],
 							"path": [
-								"41"
+								"4"
 							]
 						}
 					},
@@ -149,7 +149,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"Burger21\",\r\n    \"description\": \"beaf meat and bread\"\r\n}",
+							"raw": "{\r\n    \"name\":\"Milk Tee\",\r\n    \"description\": \"yemeni tea aden\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -215,7 +215,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \r\n    \"image\": \"asasdd\",\r\n    \"description\": \"\",\r\n    \"price\": 100.26\r\n}",
+							"raw": "{\r\n    \"categoryId\":3,\r\n    \"image\": \"/tea.jpg\",\r\n    \"description\": \"\",\r\n    \"price\": 5.09\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -223,12 +223,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{meals}}/4",
+							"raw": "{{meals}}/3",
 							"host": [
 								"{{meals}}"
 							],
 							"path": [
-								"4"
+								"3"
 							]
 						}
 					},
@@ -259,12 +259,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{categoryMeals}}/4",
+							"raw": "{{categoryMeals}}/6",
 							"host": [
 								"{{categoryMeals}}"
 							],
 							"path": [
-								"4"
+								"6"
 							]
 						}
 					},
@@ -277,7 +277,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categoryId\": \"3\",\r\n\r\n    \"image\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 11.26,\r\n    \"discount\": 20\r\n}",
+							"raw": "{\r\n    \"categoryId\": \"2\",\r\n    \"typeId\":2,\r\n    \"image\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 18.26,\r\n    \"discount\": 20\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -303,7 +303,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"image\":\"bird\", \r\n    \"description\": \"bird\", \r\n    \"price\": 17.02, \r\n    \"discount\": 12, \r\n    \"isAvailable\": false\r\n}",
+							"raw": "{\r\n    \"image\":\"bird\", \r\n    \"description\": \"bird\", \r\n    \"price\": 17.02, \r\n    \"discount\": 12, \r\n    \"isAvailable\": false,\r\n    \"typeId\":1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -389,7 +389,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Medium\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Large\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -406,13 +406,13 @@
 					"response": []
 				},
 				{
-					"name": "Update Meal Copy",
+					"name": "Update Meal Type",
 					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"large\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Medium\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

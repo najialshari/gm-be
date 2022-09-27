@@ -1,11 +1,12 @@
 {
   "development": {
     "username": "root",
-    "password": "@MySQL#1",
-    "database": "globalMenuV3",
+    "password": "asd123ASD",
+    "database": "globalMenu",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "define": {"timestamp": false}
+    "define": {"timestamp": false},
+    "timezone": "+03:00"
   },
   "test": {
     "username": "root",
