@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "07e06b3b-e275-4c20-8b0a-357a0ea97c3a",
+		"_postman_id": "89b91451-8df1-480c-874d-023f278c9048",
 		"name": "Subscription",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "22804978"
+		"_exporter_id": "22806431"
 	},
 	"item": [
 		{
@@ -86,7 +86,7 @@
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/v1/subscription/3",
+					"raw": "http://localhost:3000/api/v1/subscription/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -96,7 +96,7 @@
 						"api",
 						"v1",
 						"subscription",
-						"3"
+						"1"
 					]
 				}
 			},

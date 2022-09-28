@@ -26,12 +26,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{orders}}/17",
+					"raw": "{{orders}}/27",
 					"host": [
 						"{{orders}}"
 					],
 					"path": [
-						"17"
+						"27"
 					]
 				}
 			},
@@ -61,7 +61,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"no\": 10,\r\n    \"totalPrice\": 125.24,\r\n    \"tableId\": 1,\r\n    \"note\": \"hiii\",\r\n    \"items\": [\r\n        {\r\n            \"categoryMealsId\": null,\r\n            \"qty\": 2,\r\n            \"subTotal\": 12.11,\r\n            \"discount\": 5,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"rate\": 2\r\n        },\r\n        {\r\n            \"categoryMealsId\": null,\r\n            \"qty\": 2,\r\n            \"subTotal\": 12.11,\r\n            \"discount\": 5,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"rate\": 2\r\n        },\r\n        {\r\n            \"categoryMealsId\": null,\r\n            \"qty\": 2,\r\n            \"subTotal\": 12.11,\r\n            \"discount\": 5,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"rate\": 2\r\n        },\r\n        {\r\n            \"categoryMealsId\": null,\r\n            \"qty\": 2,\r\n            \"subTotal\": 12.11,\r\n            \"discount\": 5,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"rate\": 2\r\n        },\r\n        {\r\n            \"categoryMealsId\": null,\r\n            \"qty\": 2,\r\n            \"subTotal\": 12.11,\r\n            \"discount\": 5,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"rate\": 2\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"no\": 13,\r\n    \"totalPrice\": 125.24,\r\n    \"tableId\": \"\",\r\n    \"userId\":2,\r\n    \"addressId\":4,\r\n    \"note\": \"hiii\",\r\n    \"items\": [\r\n        {\r\n            \"categoryMealsId\": null,\r\n            \"qty\": 2,\r\n            \"subTotal\": 12.11,\r\n            \"discount\": 5,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"rate\": 2\r\n        },\r\n        {\r\n            \"categoryMealsId\": null,\r\n            \"qty\": 2,\r\n            \"subTotal\": 12.11,\r\n            \"discount\": 5,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"rate\": 2\r\n        },\r\n        {\r\n            \"categoryMealsId\": null,\r\n            \"qty\": 2,\r\n            \"subTotal\": 12.11,\r\n            \"discount\": 5,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"rate\": 2\r\n        },\r\n        {\r\n            \"categoryMealsId\": null,\r\n            \"qty\": 2,\r\n            \"subTotal\": 12.11,\r\n            \"discount\": 5,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"rate\": 2\r\n        },\r\n        {\r\n            \"categoryMealsId\": null,\r\n            \"qty\": 2,\r\n            \"subTotal\": 12.11,\r\n            \"discount\": 5,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"rate\": 2\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -104,6 +104,52 @@
 			"response": []
 		},
 		{
+			"name": "Add To Order Details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"orderId\": 27,\"items\":\r\n[\r\n    {\r\n        \"categoryMealsId\": 2,\r\n        \"qty\": 2,\r\n        \"subTotal\": 12.11,\r\n        \"discount\": 5,\r\n        \"note\": \"hh\",\r\n        \"confirmed\": null,\r\n        \"prepared\": null,\r\n        \"delivered\": null,\r\n        \"rate\": 2\r\n    },\r\n    {\r\n        \"categoryMealsId\": null,\r\n        \"qty\": 2,\r\n        \"subTotal\": 12.11,\r\n        \"discount\": 5,\r\n        \"note\": \"hh\",\r\n        \"confirmed\": null,\r\n        \"prepared\": null,\r\n        \"delivered\": null,\r\n        \"rate\": 2\r\n    },\r\n    {\r\n        \"categoryMealsId\": null,\r\n        \"qty\": 2,\r\n        \"subTotal\": 12.11,\r\n        \"discount\": 5,\r\n        \"note\": \"hh\",\r\n        \"confirmed\": null,\r\n        \"prepared\": null,\r\n        \"delivered\": null,\r\n        \"rate\": 2\r\n    }\r\n]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{addToOrderDetails}}",
+					"host": [
+						"{{addToOrderDetails}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order Details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"items\": [\r\n        {\r\n            \"orderId\": 27,\r\n            \"id\": 73,\r\n            \"categoryMealsId\": 7,\r\n            \"qty\": 7,\r\n            \"subTotal\": 10,\r\n            \"discount\": 10,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"deletedAt\": null\r\n        },\r\n        {\r\n            \"orderId\": 27,\r\n            \"id\": 75,\r\n            \"categoryMealsId\": 6,\r\n            \"qty\": 6,\r\n            \"subTotal\": 10,\r\n            \"discount\": 10,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"deletedAt\": null\r\n        },\r\n        {\r\n            \"orderId\": 27,\r\n            \"id\": 74,\r\n            \"categoryMealsId\": 5,\r\n            \"qty\": 5,\r\n            \"subTotal\": 10,\r\n            \"discount\": 10,\r\n            \"note\": \"hh\",\r\n            \"confirmed\": null,\r\n            \"prepared\": null,\r\n            \"delivered\": null,\r\n            \"deletedAt\": null\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{updateOrderDetails}}",
+					"host": [
+						"{{updateOrderDetails}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Get All Tables",
 			"request": {
 				"method": "GET",
@@ -138,7 +184,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"uuid\":\"dfd\",\r\n    \"qrCode\":\"www\",\r\n    \"no\":\"61\"\r\n}",
+					"raw": "{\r\n    \"no\":\"1\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -161,7 +207,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"uuid\":\"naji\",\r\n    \"qrCode\":\"najiqr\",\r\n    \"no\":\"3\"\r\n \r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -186,12 +232,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{tables}}/2",
+					"raw": "{{tables}}/1",
 					"host": [
 						"{{tables}}"
 					],
 					"path": [
-						"2"
+						"1"
 					]
 				}
 			},
