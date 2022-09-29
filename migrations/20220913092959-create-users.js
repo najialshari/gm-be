@@ -27,6 +27,9 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
+      photo: {
+        type: Sequelize.STRING
+      },
       roleId: {
         type: Sequelize.INTEGER,
         references: {

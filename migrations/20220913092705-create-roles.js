@@ -1,4 +1,5 @@
 'use strict';
+const models = require("../models")
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('roles', {
@@ -26,6 +27,7 @@ module.exports = {
         type: Sequelize.DATE,
       }
     });
+  await models.Role.bulkCreate([{name: 'admin'}, {name: 'user'}])
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('roles');
