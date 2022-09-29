@@ -36,7 +36,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"usernameOrEmail\": \"naji1\",\r\n    \"password\": \"123456\"\r\n}",
+					"raw": "{\r\n    \"usernameOrEmail\": \"naji12e1\",\r\n    \"password\": \"123456\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -53,17 +53,172 @@
 			"response": []
 		},
 		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usernameOrEmail\": \"naji1\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{logout}}",
+					"host": [
+						"{{logout}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{users}}",
+					"host": [
+						"{{users}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usernameOrEmail\": \"naji1\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{deleteUser}}/4",
+					"host": [
+						"{{deleteUser}}"
+					],
+					"path": [
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Username",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"newUsername\":\"najinew\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{updateUsername}}",
+					"host": [
+						"{{updateUsername}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Password",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"currPassword\": \"123456\",\r\n    \"newPassword\":\"123456789\", \r\n    \"newPasswordConfirmation\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{updatePassword}}",
+					"host": [
+						"{{updatePassword}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Email",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"newEmail\":\"new@test.com\", \r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{updateemail}}",
+					"host": [
+						"{{updateemail}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Phone No",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"newPhoneNo\":\"99999999\", \r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{updatephoneno}}",
+					"host": [
+						"{{updatephoneno}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Get User Addresses",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{address}}/1",
+					"raw": "{{address}}/5",
 					"host": [
 						"{{address}}"
 					],
 					"path": [
-						"1"
+						"5"
 					]
 				}
 			},
