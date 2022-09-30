@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var models = require('./models')
 var indexRouter = require('./routes/index');
-const cors = require('cors')
+var cors = require('cors')
 
 var app = express();
 
@@ -15,8 +15,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-require("dotenv").config();
-app.use(cors())
+
+app.use(cors());
 app.use('/api/v1', indexRouter);
 
 

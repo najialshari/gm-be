@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       qrCode: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
@@ -27,9 +27,10 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("now")
       },
-      deletedAt: {
-        type: Sequelize.DATE
-      }
+      isAvailable: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
+      },
     });
   },
   async down(queryInterface, Sequelize) {

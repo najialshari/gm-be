@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "@MySQL#1",
-    "database": "globalMenu",
+    "database": "globalMenuv10",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "define": {"timestamp": false},
@@ -16,10 +16,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "b22a1ef551dacf",
+    "password": "",
+    "database": "heroku_12d131d6cc2c403",
+    "host": "eu-cdbr-west-03.cleardb.net",
     "dialect": "mysql"
   }
 }
+

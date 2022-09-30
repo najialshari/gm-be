@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
     res.send("Welcome to back-end home page")
 });
 router.use('/users', usersRouter);
-router.use('/qrCodes', isAuthenticated , isAdmin, qrCodesRouter);
+router.use('/qrCodes', qrCodesRouter);
 router.use('/orders', isAuthenticated , isAdmin, ordersRouter);
 router.use('/menus', menusRouter);
 router.use('/subscription', subscriptionRouter);
