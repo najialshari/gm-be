@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     isAvailable: DataTypes.BOOLEAN,
-    deletedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'Meal',

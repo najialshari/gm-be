@@ -1,0 +1,135 @@
+{
+	"id": "55ed25b9-ca20-4663-86f4-608334cf6d2b",
+	"values": [
+		{
+			"key": "categories",
+			"value": "localhost:8000/api/v1/menus/categories",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "index",
+			"value": "localhost:8000/api/v1",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "users",
+			"value": "localhost:8000/api/v1/users",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "meals",
+			"value": "localhost:8000/api/v1/menus/meals",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "mealTypes",
+			"value": "localhost:8000/api/v1/menus/mealTypes",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "categoryMeals",
+			"value": "localhost:8000/api/v1/menus/categoryMeals",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "signUp",
+			"value": "localhost:8000/api/v1/users/signup",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "signIn",
+			"value": "localhost:8000/api/v1/users/signin",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "address",
+			"value": "localhost:8000/api/v1/users/addresses",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "orders",
+			"value": "localhost:8000/api/v1/orders",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "tables",
+			"value": "localhost:8000/api/v1/qrcodes/tables",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "busyTables",
+			"value": "localhost:8000/api/v1/qrcodes/tables/busy",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "addToOrderDetails",
+			"value": "localhost:8000/api/v1/orders/details/add",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "updateOrderDetails",
+			"value": "localhost:8000/api/v1/orders/details/update",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "updatePassword",
+			"value": "localhost:8000/api/v1/users/updatepassword",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "updateUsername",
+			"value": "localhost:8000/api/v1/users/updateusername",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "logout",
+			"value": "localhost:8000/api/v1/users/logout",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "deleteUser",
+			"value": "localhost:8000/api/v1/users",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "updateemail",
+			"value": "localhost:8000/api/v1/users/updateemail",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "updatephoneno",
+			"value": "localhost:8000/api/v1/users/updatePhoneNo",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "updateprofilepic",
+			"value": "localhost:8000/api/v1/users/updateprofilepic",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2022-10-09T19:04:28.377Z",
+	"_postman_exported_using": "Postman/10.0.20"
+}
