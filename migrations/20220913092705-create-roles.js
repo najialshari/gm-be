@@ -23,9 +23,6 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("now")
       },
-      deletedAt: {
-        type: Sequelize.DATE,
-      }
     });
   await models.Role.bulkCreate([{name: 'admin'}, {name: 'user'}])
   },
