@@ -18,10 +18,10 @@ module.exports = {
     port: 3306,
   },
   production: {
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    host: process.env.DB_HOST,
+    username: process.env.PDB_USERNAME,
+    password: process.env.PDB_PASSWORD,
+    database: process.env.PDB_NAME,
+    host: process.env.PDB_HOST,
     dialect: 'mysql',
   }
 };

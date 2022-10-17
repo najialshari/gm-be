@@ -12,7 +12,8 @@ router.get('/', (req, res, next) => {
 });
 router.use('/users', usersRouter);
 router.use('/qrCodes', qrCodesRouter);
-router.use('/orders', isAuthenticated , isAdmin, ordersRouter);
+router.use('/orders', ordersRouter);
+// isAuthenticated , isAdmin, ordersRouter);
 router.use('/menus', menusRouter);
 router.use('/subscription', subscriptionRouter);
 

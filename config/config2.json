@@ -10,14 +10,14 @@
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "asd123ASD@#!",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "b22a1ef551dacf",
-    "password": "",
+    "password": "dfdf",
     "database": "heroku_12d131d6cc2c403",
     "host": "eu-cdbr-west-03.cleardb.net",
     "dialect": "mysql"
