@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     isAvailable: DataTypes.BOOLEAN,
   }, {
     sequelize,
+    tableName: "categoryMeal",
     modelName: 'CategoryMeal',
   });
   return CategoryMeal;

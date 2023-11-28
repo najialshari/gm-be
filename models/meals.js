@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     isAvailable: DataTypes.BOOLEAN,
   }, {
     sequelize,
+    tableName: "meal",
     modelName: 'Meal',
   });
   return Meal;

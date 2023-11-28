@@ -1,69 +1,63 @@
-'use strict';
+"use strict";
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('categoryMeals', {
+    await queryInterface.createTable("categoryMeal", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       image: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
-      price: { 
-        type: Sequelize.DECIMAL(10,2) 
+      price: {
+        type: Sequelize.DECIMAL(10, 2),
       },
-      discount: { 
-        type: Sequelize.INTEGER, 
+      discount: {
+        type: Sequelize.INTEGER,
       },
       isAvailable: {
         type: Sequelize.BOOLEAN,
-        defaultValue: true
+        defaultValue: true,
       },
       categoryId: {
         type: Sequelize.INTEGER,
         references: {
-          model: {
-            tableName: "categories"
-          },
-          key: "id"
-        }
+          model: "category",
+          key: "id",
+        },
       },
       mealId: {
         type: Sequelize.INTEGER,
         references: {
-          model: {
-            tableName: "meals"
-          },
-          key: "id"
-        }
+          model: "meal",
+          key: "id",
+        },
       },
       typeId: {
         type: Sequelize.INTEGER,
         references: {
-          model: {
-            tableName: "mealTypes"
-          },
-          key: "id"
-        }
+          model: "mealType",
+          key: "id",
+        },
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValue: Sequelize.fn("now")
+        defaultValue: Sequelize.fn("now"),
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValue: Sequelize.fn("now")
+        defaultValue: Sequelize.fn("now"),
       },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('categoryMeals');
-  }
+    await queryInterface.dropTable("categoryMeal");
+  },
 };

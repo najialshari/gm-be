@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     rate: DataTypes.INTEGER
   }, {
     sequelize,
+    tableName: "orderDetail",
     modelName: 'OrderDetail',
   });
   return OrderDetail;

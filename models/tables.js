@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     isAvailable: DataTypes.BOOLEAN,
   }, {
     sequelize,
+    tableName: "table",
     modelName: 'Table',
   });
   return Table;

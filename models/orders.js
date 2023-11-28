@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     deletedAt: DataTypes.DATE
   }, {
     sequelize,
+    tableName: "order",
     modelName: 'Order',
   });
   return Order;

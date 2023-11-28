@@ -1,8 +1,12 @@
 const path = require('path');
 
+// This will change default paths for config to config.js
+// path.resolve method will add to the original path its arguments
+// config will be root\config\config.js , models will be root\models an so on
+
 module.exports = {
   'config': path.resolve('config', 'config.js'),
-  'models-path': path.resolve('db', 'models'),
+  'models-path': path.resolve( 'models'),
   'seeders-path': path.resolve('db', 'seeders'),
   'migrations-path': path.resolve('db', 'migrations')
 };
