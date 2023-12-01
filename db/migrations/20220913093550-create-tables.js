@@ -31,6 +31,9 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         defaultValue: true
       },
+      deletedAt: {
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {

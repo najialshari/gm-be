@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   MealType.init({
-    name: DataTypes.STRING
+    name: DataTypes.STRING,
+    deletedAt: DataTypes.DATE,
   }, {
     sequelize,
     tableName: "mealType",

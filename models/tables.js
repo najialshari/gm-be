@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     uuid: DataTypes.STRING,
     qrCode: DataTypes.STRING,
     isAvailable: DataTypes.BOOLEAN,
+    deletedAt: DataTypes.DATE,
   }, {
     sequelize,
     tableName: "table",

@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     mealId: DataTypes.INTEGER,
     typeId: DataTypes.INTEGER,
     isAvailable: DataTypes.BOOLEAN,
+    deletedAt: DataTypes.DATE,
   }, {
     sequelize,
     tableName: "categoryMeal",

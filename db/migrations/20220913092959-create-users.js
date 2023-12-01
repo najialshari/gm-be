@@ -17,13 +17,8 @@ module.exports = {
         type: Sequelize.STRING
       },
       email: {
-<<<<<<< HEAD
         type: Sequelize.STRING,
         unique: true
-=======
-        unique: true,
-        type: Sequelize.STRING
->>>>>>> ac0a956 (Data Base)
       },
       password: {
         type: Sequelize.STRING

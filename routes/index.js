@@ -8,7 +8,7 @@ var subscriptionRouter = require('../lib/subscribers/routes');
 const { isAuthenticated, isAdmin } = require('../lib/middleware');
 
 router.get('/', (req, res, next) => {
-    res.send("Welcome to back-end home page")
+    res.send("Welcome to back-end home page!")
 });
 router.use('/users', usersRouter);
 router.use('/qrCodes', qrCodesRouter);
