@@ -8,7 +8,7 @@ module.exports = {
     host: process.env.DDB_HOST,
     dialect: process.env.DDB_DIALECT,
     port: process.env.DDB_PORT,
-    dialectOptions: {ssl:JSON.parse(process.env.DDB_OPTIONS)}
+    // dialectOptions: {ssl:JSON.parse(process.env.DDB_OPTIONS)}
   },
   test: {
     username: process.env.DDB_USERNAME,
