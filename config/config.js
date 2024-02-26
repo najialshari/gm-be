@@ -26,5 +26,6 @@ module.exports = {
     host: process.env.PDB_HOST,
     dialect: process.env.PDB_DIALECT,
     port: process.env.PDB_PORT,
+    dialectOptions: {ssl:{"require":true,"rejectUnauthorized":false}}
   },
 };
